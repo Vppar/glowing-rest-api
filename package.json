@@ -1,0 +1,20 @@
+{
+  "name": "glowing-rest-api",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Glowing Catalog's REST API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tunts/glowing-rest-api"
+  },
+  "author": "Mathias Kretschek <mathias@kretschek.com.br> (http://mathias.ms/)",
+  "license": "ClosedSource",
+  "bugs": {
+    "url": "https://github.com/Tunts/glowing-rest-api/issues"
+  },
+  "homepage": "https://github.com/Tunts/glowing-rest-api"
+}
