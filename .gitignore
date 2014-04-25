@@ -1,0 +1,11 @@
+node_modules
+dist
+coverage
+.tmp
+.sass-cache
+*.sw*
+**/_notes
+/build
+/target
+
+.idea/*
