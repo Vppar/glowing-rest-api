@@ -5,7 +5,7 @@
   "description": "Glowing Catalog's REST API",
   "main": "lib/app.js",
   "scripts": {
-    "test": "make test"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,10 @@
     "sinon-chai": "^2.5.0",
     "mocha": "^1.18.2",
     "supertest": "^0.11.0",
-    "jshint": "^2.5.0"
+    "jshint": "^2.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-mocha-test": "^0.10.2",
+    "grunt": "^0.4.4"
   },
   "dependencies": {
     "underscore": "^1.6.0",
