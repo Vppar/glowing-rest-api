@@ -6,7 +6,7 @@
   "main": "lib/app.js",
   "scripts": {
     "test": "grunt test",
-    "start": "./node_modules/.bin/nodemon ./server"
+    "start": "nodemon ./server"
   },
   "repository": {
     "type": "git",
@@ -35,5 +35,10 @@
     "express": "^4.1.1",
     "firebase": "^1.0.15-3",
     "underscore": "^1.6.0"
+    "connect": "^2.15.0",
+    "elastical": "~0.0.13",
+    "winston": "~0.7.3",
+    "winston-elasticsearch": "~0.1.1",
+    "winston-loggly": "~1.0.1"
   }
 }
