@@ -14,6 +14,7 @@ module.exports = function (grunt) {
     mochaTest: {
       test: {
         options: {
+          require : ['test/setup.js'],
           reporter: 'dot',
           ui: 'bdd',
           ignoreLeaks: false
