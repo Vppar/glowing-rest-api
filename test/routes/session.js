@@ -3,6 +3,7 @@ var expect = require('chai').expect;
 var request = require('supertest');
 var createApp = require('../..');
 
+var HttpStatus = require('../../lib/enum/httpStatus');
 
 describe('session routes', function () {
   var SessionEndpoint = require('../../lib/endpoints/session');
@@ -20,12 +21,12 @@ describe('session routes', function () {
       };
 
       request(app)
-        .post('/foo')
+        .post('/core/session')
         .set('Content-Type', 'application/json')
         .send(credentials)
         .expect(function (res) {
           console.log(res);
-          if (res.statusCode === 404) {
+          if (res.statusCode === HttpStatus.NOT_FOUND) {
             throw new Error('POST /core/session is not defined');
           }
         })
