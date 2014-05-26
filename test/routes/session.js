@@ -37,7 +37,7 @@ describe('session routes', function () {
 
   describe('GET /core/session', function () {
     it('is defined', function (done) {
-      var token = '0e1d384e442ecb9f43284f5b51eb3f94c84a6bbc496592f37fa4f153061e8bdb';
+      var token = '0d4e6f831b8be192403d987e1e2285b7c5457cd8d9c525250f35c604566ac458';
 
       request(app)
         .get('/core/session')
