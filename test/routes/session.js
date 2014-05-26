@@ -54,7 +54,7 @@ describe('session routes', function () {
   });
 
 
-  describe.only('DELETE /core/session', function () {
+  describe('DELETE /core/session', function () {
     it('is defined', function (done) {
       this.timeout(5000);
 
