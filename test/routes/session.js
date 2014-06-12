@@ -25,10 +25,7 @@ describe('session routes', function () {
         .set('Content-Type', 'application/json')
         .send(credentials)
         .expect(function (res) {
-          console.log('>>> status (POST)', res.statusCode);
-          if (res.statusCode === HttpStatus.NOT_FOUND) {
-            throw new Error('POST /core/session is not defined');
-          }
+          expect(res.statusCode).to.not.equal(HttpStatus.NOT_FOUND);
         })
         .end(done);
     });
@@ -44,10 +41,7 @@ describe('session routes', function () {
         .set('Content-Type', 'application/json')
         .query({token : token})
         .expect(function (res) {
-          console.log('>>> status (GET)', res.statusCode);
-          if (res.statusCode === HttpStatus.NOT_FOUND) {
-            throw new Error('GET /core/session is not defined');
-          }
+          expect(res.statusCode).to.not.equal(HttpStatus.NOT_FOUND);
         })
         .end(done);
     });
@@ -64,10 +58,7 @@ describe('session routes', function () {
         .del('/core/session')
         .query({token : token})
         .expect(function (res) {
-          console.log('>>> status (DELETE)', res.statusCode);
-          if (res.statusCode === HttpStatus.NOT_FOUND) {
-            throw new Error('DELETE /core/session is not defined');
-          }
+          expect(res.statusCode).to.not.equal(HttpStatus.NOT_FOUND);
         })
         .end(done);
     });
@@ -86,10 +77,7 @@ describe('session routes', function () {
         .query({token : token})
         .send({refresh : refresh})
         .expect(function (res) {
-          console.log('>>> status (POST /refresh)', res.statusCode, res.body);
-          if (res.statusCode === HttpStatus.NOT_FOUND) {
-            throw new Error('POST /core/session/refresh is not defined');
-          }
+          expect(res.statusCode).to.not.equal(HttpStatus.NOT_FOUND);
         })
         .end(done);
     });
